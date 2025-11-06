@@ -1,7 +1,8 @@
 /* projects */
 
 #projects h3 {
-    color: var(--text-secondary-color) !important;
+    color: var(--primary-color) !important;
+    font-family: "Alata", sans-serif;
     animation: fade-up-delayed 2s ease-out;
 }
 

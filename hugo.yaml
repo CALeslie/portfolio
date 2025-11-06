@@ -30,7 +30,7 @@ params:
     enable: true
     bottomImage:
       enable: false
-    intro: Digital Simulation - Shawnee State University
+    intro: Game Programmer
     title: Camilla Leslie
     content: Software engineer specializing in digital simulation and games.
     image: images/camilla3.jpg
@@ -110,7 +110,7 @@ params:
           items:
             - "Deckbuilding Mechanics"
             - "Turn-based Combat"
-            - "Random Events"
+            - "Random Events "
         links:
           - icon: fab fa-itch-io
             url: https://thecammy.itch.io/bonerolla
@@ -227,7 +227,7 @@ params:
     title: "Contact"
     content: Get in touch with me!
     btnName: Send a Message
-    btnLink: mailto:lesliec@mymail.shawnee.edu
+    btnLink: mailto:calesliesoftware@gmail.com
 
   footer:
     socialNetworks:

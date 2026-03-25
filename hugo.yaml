@@ -18,7 +18,7 @@ outputs:
 
 params:
   title: Camilla Leslie
-  description: Software engineering student at Shawnee State University specializing in digital simulation and games.
+  description: Game Developer and Software Engineer
   animate: true
   favicon: images/Uccello2.svg
   useBootstrapCDN: false
@@ -38,7 +38,7 @@ params:
     button:
       enable: true
       name: Resume
-      url: resu.pdf
+      url: cLeslie_Resume.pdf
       download: false
       newPage: true
     socialLinks:

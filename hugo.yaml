@@ -67,9 +67,14 @@ params:
           - "Gameplay Programming"
           - "Build Automation"
           - "Main Game Loop"
+        links:
+          - icon: fab fa-steam
+            url: https://store.steampowered.com/app/4450260/666_Malevolence_Lane/
+          - icon: fab fa-discord
+            url: https://discord.gg/4UdRc5Supg
         featured:
-          name: Join our community Discord!
-          link: https://discord.gg/4UdRc5Supg
+          name: Check it out on Steam!
+          link: https://store.steampowered.com/app/4450260/666_Malevolence_Lane/
 
       - title: "Pizza Wizard: 144X - 2025"
         content: Arcade style pizza delivery game, utilize spells and upgrades to try and achieve a highscore. Made all models and art assets except title logo by hand.
@@ -95,7 +100,7 @@ params:
           - icon: fab fa-itch-io
             url: https://cube-number-zero.itch.io/pizza-wizard-144x
         featured:
-          name: Check out on Itch!
+          name: Check it out on Itch!
           link: https://cube-number-zero.itch.io/pizza-wizard-144x
 
       - title: "Bone Rolla - 2022"
@@ -115,7 +120,7 @@ params:
           - icon: fab fa-itch-io
             url: https://thecammy.itch.io/bonerolla
         featured:
-          name: Check out on Itch!
+          name: Check it out on Itch!
           link: https://thecammy.itch.io/bonerolla
 
       - title: "Deep Cover - 2022"
@@ -135,7 +140,7 @@ params:
           - icon: fab fa-itch-io
             url: https://thecammy.itch.io/deep-cover
         featured:
-          name: Check out on Itch!
+          name: Check it out on Itch!
           link: https://thecammy.itch.io/deep-cover
 
       - title: "RandomItemGen - 2021"
@@ -155,7 +160,7 @@ params:
           - icon: fab fa-itch-io
             url: https://thecammy.itch.io/randomitemgen
         featured:
-          name: Play on Itch!
+          name: Play it on Itch!
           link: https://thecammy.itch.io/randomitemgen
 
       - title: "Duality - 2018"
@@ -175,7 +180,7 @@ params:
           - icon: fab fa-itch-io
             url: https://thecammy.itch.io/duality
         featured:
-          name: Play on Itch!
+          name: Play it on Itch!
           link: https://thecammy.itch.io/duality
 
   about:

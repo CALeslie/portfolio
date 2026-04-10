@@ -1,7 +1,7 @@
 baseURL: https://caleslie.github.io/portfolio
 languageCode: en-us
 title: Camilla Leslie - Software Engineer
-theme: hugo-profile
+#theme: hugo-profile
 
 caches:
   images:

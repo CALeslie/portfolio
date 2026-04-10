@@ -8,16 +8,7 @@
     <loc>http://localhost:1313/portfolio/gallery/</loc>
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/666-malevolence-lane/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/portfolio/blogs/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/blueprints/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/build-automation/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/blogs/666-malevolence-lane/</loc>
@@ -29,21 +20,24 @@
     <loc>http://localhost:1313/portfolio/tags/example/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/python/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/portfolio/tags/sample/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/portfolio/tags/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/unreal-engine/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>http://localhost:1313/portfolio/projects/666-malevolence-lane/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/blueprints/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/build-automation/</loc>
   </url><url>
     <loc>http://localhost:1313/portfolio/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/python/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/tags/unreal-engine/</loc>
   </url>
 </urlset>

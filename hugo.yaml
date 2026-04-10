@@ -1,4 +1,4 @@
-baseURL: https://caleslie.github.io/
+baseURL: https://caleslie.github.io/portfolio
 languageCode: en-us
 title: Camilla Leslie - Software Engineer
 theme: hugo-profile
@@ -28,7 +28,7 @@ params:
   title: Camilla Leslie
   description: Game Developer and Software Engineer
   animate: true
-  favicon: images/Uccello2.svg
+  favicon: /images/Uccello2.svg
   useBootstrapCDN: false
 
   navbar:

@@ -8,7 +8,7 @@ tags:
   - Build Automation
   - Blueprints
   - Python
-#image: images/mallane2.jpg
+image: /images/mallane2.jpg
 description: ""
 toc: 
 ---

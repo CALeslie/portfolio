@@ -5,13 +5,16 @@
 
     switch (localStorageValue) {
         case "dark":
+            document.documentElement.classList.add('dark');
             document.body.classList.add('dark');
             break;
         case "light":
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             break;
         default:
             if (mediaQuery) {
+                document.documentElement.classList.add('dark');
                 document.body.classList.add('dark');
             }
             break;
@@ -50,7 +53,7 @@
     <nav class="pt-3 navbar navbar-expand-lg {{ if .Site.Params.animate }}animate{{ end }}">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             <!-- navbar brand -->
-            <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
+            <a class="navbar-brand primary-font text-wrap" href="{{ .Site.Home.RelPermalink }}">
                 {{ if and (or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo)) (.Site.Params.navbar.showBrandLogo | default true) }}
                 <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
                     class="d-inline-block align-top">
@@ -62,7 +65,7 @@
 
             {{ if not (.Site.Params.navbar.disableSearch | default false) }}
                 <div>
-                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}'
+                    <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default (i18n "search_placeholder") }}'
                         aria-label="Search" oninput="searchOnChange(event)">
                 </div>
             {{ end }}
@@ -81,60 +84,60 @@
                     {{ if not (.Site.Params.navbar.disableSearch | default false) }}
                         <li class="nav-item navbar-text d-block d-md-none">
                             <div class="nav-link">
-                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}' aria-label="Search" oninput="searchOnChange(event)">
+                                <input id="search" autocomplete="off" class="form-control mr-sm-2" placeholder='{{ .Site.Params.navbar.searchPlaceholder | default (i18n "search_placeholder") }}' aria-label="Search" oninput="searchOnChange(event)">
                             </div>
                         </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
+                    {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
-                            aria-label="projects">
-                            {{ .Site.Params.projects.title | default "Projects" }}
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#about" aria-label="about">
+                            {{ .Site.Params.about.title | default (i18n "nav_about") }}
                         </a>
                     </li>
                     {{ end }}
 
                     {{ if and (.Site.Params.experience.enable | default false) (not (.Site.Params.navbar.menus.disableExperience | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#experience"
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#experience"
                             aria-label="experience">
-                            {{ .Site.Params.experience.title | default "Experience" }}
+                            {{ .Site.Params.experience.title | default (i18n "nav_experience") }}
                         </a>
                     </li>
                     {{ end }}
 
                     {{ if and (.Site.Params.education.enable | default false) (not (.Site.Params.navbar.menus.disableEducation | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#education"
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#education"
                             aria-label="education">
-                            {{ .Site.Params.education.title | default "Education" }}
+                            {{ .Site.Params.education.title | default (i18n "nav_education") }}
                         </a>
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
+                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#about" aria-label="about">
-                            {{ .Site.Params.about.title | default "About" }}
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#projects"
+                            aria-label="projects">
+                            {{ .Site.Params.projects.title | default (i18n "nav_projects") }}
                         </a>
                     </li>
                     {{ end }}
 
                     {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#achievements"
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#achievements"
                             aria-label="achievements">
-                            {{ .Site.Params.achievements.title | default "Achievements" }}
+                            {{ .Site.Params.achievements.title | default (i18n "nav_achievements") }}
                         </a>
                     </li>
                     {{ end }}
 
                     {{ if and (.Site.Params.contact.enable | default false) (not (.Site.Params.navbar.menus.disableContact | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#contact"
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#contact"
                             aria-label="contact">
-                            {{ .Site.Params.contact.title | default "Contact" }}
+                            {{ .Site.Params.contact.title | default (i18n "nav_contact") }}
                         </a>
                     </li>
                     {{ end }}
@@ -173,11 +176,13 @@
                     {{end}}
                     {{end}}
 
+                    {{- partial "sections/language-switcher.html" . -}}
+
                     {{ if (not .Site.Params.theme.disableThemeToggle | default false) }}
                     <li class="nav-item navbar-text">
                         <!-- darkmode mode toggle -->
                         <div class="text-center">
-                            <button id="theme-toggle">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
                                 <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                 </svg>

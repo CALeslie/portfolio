@@ -1,0 +1,74 @@
+/* projects */
+
+#projects h3 {
+    color: var(--primary-color) !important;
+    font-family: "Alata", sans-serif;
+    animation: fade-up-delayed 2s ease-out;
+}
+
+#projects a {
+    text-decoration: none;
+    color: var(--text-link-color) !important;
+}
+
+#projects .badge {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    margin: 0 1%;
+}
+
+#projects .card {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+    min-height: 200px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    border: 1px ridge rgb(160 160 160 / 0.6) !important;
+    animation: fade-up-delayed 2s ease-out;
+}
+
+#projects .card:hover {
+    box-shadow: 0 0 11px rgb(15 80 100 / 20%);
+    transition: transform 0.3s;
+    border: 1px ridge rgba(92, 92, 92, 0.6) !important;
+}
+
+#projects .card .card-head {
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: none !important;
+}
+
+#projects .card .card-footer {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#projects .card:hover .card-img-top {
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+}
+
+#projects .card-img-top {
+    transition: transform 0.3s;
+}
+
+#projects .float-end .btn {
+    transition: none;
+    border-radius: .5rem !important;
+    border-color: var(--primary-color) !important;
+}
+
+#projects .float-end .btn:focus {
+    box-shadow: none !important;
+    background-color: rgb(127, 214, 255);
+}
+
+#projects .float-end .btn:hover {
+    box-shadow: none !important;
+    background-color: rgb(25, 120, 230);
+    color: rgb(240, 240, 240) !important;
+}

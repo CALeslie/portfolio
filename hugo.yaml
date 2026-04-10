@@ -1,4 +1,4 @@
-baseURL: https://caleslie.github.io/portfolio/
+baseURL: https://caleslie.github.io/
 languageCode: en-us
 title: Camilla Leslie - Software Engineer
 theme: hugo-profile
@@ -15,6 +15,14 @@ outputs:
   page:
     - "HTML"
     - "RSS"
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      title: Projects I've Worked On
+      url: /projects
+      weight: 1
 
 params:
   title: Camilla Leslie
@@ -224,7 +232,7 @@ params:
           name: "Shawnee State University"
           url: "https://shawnee.edu"
         date: "2022 - 2026"
-        GPA: "3.64 out of 4.0"
+        GPA: "3.60 out of 4.0"
         content: "Well rounded mix of theory and application of multiple areas of Computer Science including data structures, operating systems, 3D graphics programming, algorithms, and more. Developed several game projects while studying, and currently spending my senior year as Technical Director for the collaborative capstone project '666 Malevolence Lane'."
 
   contact:

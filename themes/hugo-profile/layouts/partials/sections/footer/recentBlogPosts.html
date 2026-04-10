@@ -1,11 +1,17 @@
 {{ $recentPostsPath := .Site.Params.footer.recentPosts.path | default "blogs" }}
-{{ $currentNumOfrecentPosts := len (where .Site.RegularPages "Type" $recentPostsPath) }} 
+{{- /* Get the blogs section page */ -}}
+{{ $blogsSection := site.GetPage "section" $recentPostsPath }}
+{{ $allSectionPosts := slice }}
+{{ if $blogsSection }}
+  {{ $allSectionPosts = $blogsSection.RegularPages }}
+{{ end }}
+{{ $currentNumOfrecentPosts := len $allSectionPosts }} 
 {{ if and (gt $currentNumOfrecentPosts 0) (.Site.Params.footer.recentPosts.enable | default false) }} 
 <div class="container py-3" id="recent-posts">
     {{ $recentPostsCount := .Site.Params.footer.recentPosts.count | default 3 }}
-    {{ $recentPosts := where .Site.RegularPages "Section" $recentPostsPath | first $recentPostsCount }}
+    {{ $recentPosts := $allSectionPosts | first $recentPostsCount }}
     <div class="h3 text-center text-secondary py-3">
-        {{ .Site.Params.footer.recentPosts.title | default "Recent Posts" }}
+        {{ .Site.Params.footer.recentPosts.title | default (i18n "recent_posts") }}
     </div>
     <div class="row justify-content-center">
         {{ range $recentPosts }}
@@ -27,8 +33,8 @@
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
-                    <span class="float-start">{{ .Date.Format (.Site.Params.datesFormat.articleRecent | default "January 2, 2006") }}</span>
-                    <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default "Read" }}</a>
+                    <span class="float-start">{{ .Date | time.Format (":date_long" | default "January 2, 2006") }}</span>
+                    <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default (i18n "read") }}</a>
                 </div>
             </div>
         </div>

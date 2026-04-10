@@ -1,10 +1,10 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
-<!-- <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all"> -->
+<!-- <link rel="stylesheet" href="{{ (printf "%scss/list.css" (.Site.Params.staticPath | default "")) | relURL }}" media="all"> -->
 {{ if .Params.viewer | default true }}
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}css/gallery.css">
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}viewer/viewer.min.css">
-<script src="{{ .Site.Params.staticPath }}viewer/viewer.min.js"></script>
+<link rel="stylesheet" href="{{ (printf "%scss/gallery.css" (.Site.Params.staticPath | default "")) | relURL }}">
+<link rel="stylesheet" href="{{ (printf "%sviewer/viewer.min.css" (.Site.Params.staticPath | default "")) | relURL }}">
+<script src="{{ (printf "%sviewer/viewer.min.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{ end }}
 
 {{ end }}

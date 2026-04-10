@@ -1,9 +1,9 @@
 {{ define "head" }}
 <meta name="description" content="{{ .Params.description }}">
-<link rel="stylesheet" href="{{.Site.Params.staticPath}}css/single.css">
+<link rel="stylesheet" href="{{ (printf "%scss/single.css" (.Site.Params.staticPath | default "")) | relURL }}">
 
 <!-- fontawesome -->
-<script defer src="{{.Site.Params.staticPath}}fontawesome-6/all-6.4.2.js"></script>
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{ end }}
 
 {{ define "title" }}
@@ -23,11 +23,14 @@
                 {{ .Params.author }}
                 <small>|</small>
               {{ end }}
-              {{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}
 
-              {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
+              {{ if .Params.date }}
+                {{ .Date | time.Format (":date_medium" | default "Jan 2, 2006") }}
+              {{ end }}
+
+              {{ if or (.Site.Params.singlePages.readTime.enable | default false) (.Params.enableReadingTime) }}
               <span id="readingTime">
-                {{ .Site.Params.singlePages.readTime.content | default "min read" }}
+                {{ .Site.Params.singlePages.readTime.content | default (i18n "min_read") }}
               </span>
               {{ end }}
             </div>
@@ -47,7 +50,7 @@
           {{ if .Params.toc | default true}}
           <aside class="toc">
               <h5>
-                {{ .Site.Params.terms.toc | default "Table Of Contents" }}
+                {{ .Site.Params.terms.toc | default (i18n "toc") }}
               </h5>
               <div class="toc-content">
                 {{.TableOfContents}}
@@ -57,10 +60,11 @@
 
           {{ if .Params.tags }}
           <aside class="tags">
-            <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
+            <h5>{{ .Site.Params.terms.tags | default (i18n "tags") }}</h5>
             <ul class="tags-ul list-unstyled list-inline">
               {{range .Params.tags}}
-              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}"
+              {{ $tagURL := printf "tags/%s" (. | urlize) }}
+              <li class="list-inline-item"><a href="{{ $tagURL | relLangURL }}"
                 {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}
               >{{.}}</a></li>
               {{end}}
@@ -70,16 +74,16 @@
 
           {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
           <aside class="social">
-            <h5>{{ .Site.Params.terms.social | default "Social" }}</h5>
+            <h5>{{ .Site.Params.terms.social | default (i18n "social") }}</h5>
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                  <a target="_blank" href="https://www.linkedin.com/feed/?shareActive=true&text={{ .Params.description }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}">
+                  <a target="_blank" href='https://twitter.com/share?text={{ .Title }}&url={{ .Site.Params.hostName }}{{ .Permalink | absURL }}&hashtags={{ delimit .Params.tags "," }}'>
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
@@ -89,7 +93,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject={{ .Title }}&amp;body={{ .Site.Params.terms.emailText | default "Check out this site" }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}'>
+                  <a target="_blank" href='mailto:?subject={{ .Title }}&amp;body={{ .Site.Params.terms.emailText | default (i18n "email_text") }} {{ .Site.Params.hostName }}{{ .Permalink | absURL }}'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -115,7 +119,7 @@
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="{{.Site.Params.staticPath}}js/scrollProgressBar.js"></script>
+<Script src="{{ (printf "%sjs/scrollProgressBar.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{ end }}
 
 <script>
@@ -148,7 +152,7 @@
 </script>
 
 {{ if or (.Site.Params.singlePages.readTime.enable | default true) (.Params.enableReadingTime) }}
-<script src="{{.Site.Params.staticPath}}js/readingTime.js"></script>
+<script src="{{ (printf "%sjs/readingTime.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
 {{end}}
 
 {{ end }}

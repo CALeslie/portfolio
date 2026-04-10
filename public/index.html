@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.151.0"><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script><meta charset="UTF-8">
+	<meta name="generator" content="Hugo 0.151.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=images/Uccello2.svg type="image/gif">
+<link rel="icon" href="/images/Uccello2.svg" type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
 </noscript>
 
 
-<link rel="stylesheet" href="css/font.css" media="all">
+<link rel="stylesheet" href="/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="http://localhost:1313/portfolio/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Camilla Leslie - Software Engineer">
   <meta property="og:title" content="Camilla Leslie - Software Engineer">
   <meta property="og:description" content="Game Developer and Software Engineer">
@@ -42,11 +42,15 @@
   <meta name="twitter:description" content="Game Developer and Software Engineer">
 
 
-<link rel="stylesheet" href="bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="css/header.css" media="all">
-<link rel="stylesheet" href="css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="css/theme.css" media="all">
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/language-switcher.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
 
 <style>
     :root {
@@ -55,8 +59,7 @@
         --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
-        --background-fade-color: #accfe4;
-        --primary-color: #2883b8;
+        --primary-color: #007bff;
         --secondary-color: #f8f9fa;
 
          
@@ -65,7 +68,6 @@
         --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
-        --background-fade-color-dark: #1e2730;
         --primary-color-dark: #ffffff;
         --secondary-color-dark: #212529;
     }
@@ -106,11 +108,11 @@
 
 
 <meta name="description" content=Game&#32;Developer&#32;and&#32;Software&#32;Engineer>
-<link rel="stylesheet" href="css/index.css" media="all">
-<link rel="stylesheet" href="css/projects.css" media="all">
+<link rel="stylesheet" href="/css/index.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 
 
-<script defer src="fontawesome-6/all-6.4.2.js"></script>
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
 
   
@@ -131,13 +133,16 @@ Camilla Leslie - Software Engineer
 
     switch (localStorageValue) {
         case "dark":
+            document.documentElement.classList.add('dark');
             document.body.classList.add('dark');
             break;
         case "light":
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             break;
         default:
             if (mediaQuery) {
+                document.documentElement.classList.add('dark');
                 document.body.classList.add('dark');
             }
             break;
@@ -152,7 +157,7 @@ Camilla Leslie - Software Engineer
     <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="/portfolio">
+            <a class="navbar-brand primary-font text-wrap" href="/">
                 
                 <img src="images/Uccello2.svg" width="30" height="30"
                     class="d-inline-block align-top">
@@ -177,16 +182,15 @@ Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio#projects"
-                            aria-label="projects">
-                            Overview
+                        <a class="nav-link" href="/#about" aria-label="about">
+                            About
                         </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio#experience"
+                        <a class="nav-link" href="/#experience"
                             aria-label="experience">
                             Experience
                         </a>
@@ -195,7 +199,7 @@ Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio#education"
+                        <a class="nav-link" href="/#education"
                             aria-label="education">
                             Education
                         </a>
@@ -204,8 +208,9 @@ Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio#about" aria-label="about">
-                            About
+                        <a class="nav-link" href="/#projects"
+                            aria-label="projects">
+                            Overview
                         </a>
                     </li>
                     
@@ -214,7 +219,7 @@ Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio#contact"
+                        <a class="nav-link" href="/#contact"
                             aria-label="contact">
                             Contact
                         </a>
@@ -225,12 +230,21 @@ Camilla Leslie - Software Engineer
 
                     
                     
-
                     
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/projects" title="Projects I&#39;ve Worked On">
+                            
+                            Projects
+                        </a>
+                    </li>
+                    
+                    
+
                     <li class="nav-item navbar-text">
                         
                         <div class="text-center">
-                            <button id="theme-toggle">
+                            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
                                 <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                                 </svg>
@@ -333,7 +347,6 @@ Camilla Leslie - Software Engineer
     </div>
     
 </section>
-
 <section id="projects" class="py-5">
     <div class="container">
         <h3 class="text-center">Overview</h3>
@@ -359,22 +372,6 @@ Camilla Leslie - Software Engineer
                             An action-packed minigame focused local multiplayer experience for you and your friends!
                         </div>
                     </div>
-                    
-                    
-                    <div class="card-footer py-3">Responsibilities:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">Technical Direction</span>
-                                
-                                <span class="badge badge-secondary">Gameplay Programming</span>
-                                
-                                <span class="badge badge-secondary">Build Automation</span>
-                                
-                                <span class="badge badge-secondary">Main Game Loop</span>
-                                
-                            </div>
-                        </div>
-                        
                     
                     <div class="card-footer py-3">
                         
@@ -425,20 +422,6 @@ Camilla Leslie - Software Engineer
                         </div>
                     </div>
                     
-                    
-                    <div class="card-footer py-3">Responsibilities:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">UI Design &amp; Implementation</span>
-                                
-                                <span class="badge badge-secondary">Modeling</span>
-                                
-                                <span class="badge badge-secondary">Texturing</span>
-                                
-                            </div>
-                        </div>
-                        
-                    
                     <div class="card-footer py-3">
                         
                         <span class="m-1 mx-2">
@@ -486,20 +469,6 @@ Camilla Leslie - Software Engineer
                         </div>
                     </div>
                     
-                    <div class="card-footer py-3">Features I worked on:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">Deckbuilding Mechanics</span>
-                                
-                                <span class="badge badge-secondary">Turn-based Combat</span>
-                                
-                                <span class="badge badge-secondary">Random Events </span>
-                                
-                            </div>
-                        </div>
-                        
-                    
-                    
                     <div class="card-footer py-3">
                         
                         <span class="m-1 mx-2">
@@ -540,20 +509,6 @@ Camilla Leslie - Software Engineer
                             Shawnee University Fall Game Jam entry about making your own camouflage to increase your odds of going undetected. Two person team, won most interesting mechanic and 2nd overall in game jam!
                         </div>
                     </div>
-                    
-                    <div class="card-footer py-3">Features I worked on:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">Raster Drawing System</span>
-                                
-                                <span class="badge badge-secondary">Image Comparison</span>
-                                
-                                <span class="badge badge-secondary">Stealth Detection &amp; Enemy AI</span>
-                                
-                            </div>
-                        </div>
-                        
-                    
                     
                     <div class="card-footer py-3">
                         
@@ -596,20 +551,6 @@ Camilla Leslie - Software Engineer
                         </div>
                     </div>
                     
-                    <div class="card-footer py-3">Features I worked on:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">Random Item Generation</span>
-                                
-                                <span class="badge badge-secondary">Item Attribute System</span>
-                                
-                                <span class="badge badge-secondary">Inventory &amp; Equipment System</span>
-                                
-                            </div>
-                        </div>
-                        
-                    
-                    
                     <div class="card-footer py-3">
                         
                         <span class="m-1 mx-2">
@@ -651,20 +592,6 @@ Camilla Leslie - Software Engineer
                         </div>
                     </div>
                     
-                    <div class="card-footer py-3">Features I worked on:
-                            <div class="pb-2 bg-transparent">
-                                
-                                <span class="badge badge-secondary">Key &amp; Switch Puzzle Mechanics</span>
-                                
-                                <span class="badge badge-secondary">Simple Enemy AI</span>
-                                
-                                <span class="badge badge-secondary">Player Death - Ghost Mechanics</span>
-                                
-                            </div>
-                        </div>
-                        
-                    
-                    
                     <div class="card-footer py-3">
                         
                         <span class="m-1 mx-2">
@@ -684,6 +611,8 @@ Camilla Leslie - Software Engineer
                     
                 </div>
             </div>
+            
+            
             
             
         </div>
@@ -747,7 +676,6 @@ Camilla Leslie - Software Engineer
     </div>
 </section>
 
-
 <section id="education" class="py-5">
     <div class="container">
         <h3 class="text-center">Education</h3>
@@ -778,7 +706,7 @@ Camilla Leslie - Software Engineer
                                 <div class="py-1">
                                     GPA:
                                     <i>
-                                        <small>3.64 out of 4.0</small>
+                                        <small>3.60 out of 4.0</small>
                                     </i> 
                                 </div>
                                 
@@ -797,16 +725,14 @@ Camilla Leslie - Software Engineer
     </div>
 </section>
 
-
-<section id="about">
-    <br>
+<section id="about" class="py-0 py-sm-5">
     <div class="container bg-transparent">
         <h3 class="text-center bg-transparent">About</h3>
         <div class="bg-transparent row justify-content-center px-3 py-5">
             
             <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
-                <div class="image d-flex px-5" id="about-image">
-                    <img src="images/Uccello2.svg" class="img-thumbnail mx-auto rounded-circle" alt="">
+                <div class="image d-flex px-5">
+                    <img src="images/Uccello2.svg" class="img-thumbnail mx-auto rounded-circle" alt="Camilla Leslie profile picture">
                 </div>
             </div>
             
@@ -814,8 +740,6 @@ Camilla Leslie - Software Engineer
                 I&rsquo;m currently a senior at Shawnee State University in Portsmouth, OH, studying Digital Simulation! Passionate about making memorable games and interactive digital experiences. Let&rsquo;s make something unique together!
 
                 
-                <br>
-                <br>
                 Tools and Skills I&#39;m proficient at:
                 <ul>
                     
@@ -845,10 +769,6 @@ Camilla Leslie - Software Engineer
         </div>
     </div>
 </section>
-
-<div id="contactBorder">
-    <br>
-</div>
 <section id="contact" class="py-5">
     <div class="container">
         <h3 class="text-center">Contact</h3>
@@ -893,12 +813,16 @@ Camilla Leslie - Software Engineer
 
   </div><footer>
     
+
+
+  
+
  
 
 <div class="text-center pt-2">
     
     <span class="px-1">
-        <a href="https://github.com/CALeslie" aria-label="github">
+        <a href="https://github.com/CALeslie" target="_blank" aria-label="github">
             <svg xmlns="http://www.w3.org/2000/svg" width="2.7em" height="2.7em" viewBox="0 0 1792 1792">
                 <path id="footer-socialNetworks-github-svg-path"
                     d="M522 1352q-8 9-20-3-13-11-4-19 8-9 20 3 12 11 4 19zm-42-61q9 12 0 19-8 6-17-7t0-18q9-7 17 6zm-61-60q-5 7-13 2-10-5-7-12 3-5 13-2 10 5 7 12zm31 34q-6 7-16-3-9-11-2-16 6-6 16 3 9 11 2 16zm129 112q-4 12-19 6-17-4-13-15t19-7q16 5 13 16zm63 5q0 11-16 11-17 2-17-11 0-11 16-11 17-2 17 11zm58-10q2 10-14 14t-18-8 14-15q16-2 18 9zm964-956v960q0 119-84.5 203.5t-203.5 84.5h-224q-16 0-24.5-1t-19.5-5-16-14.5-5-27.5v-239q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 103t.5 68q0 22-11 33.5t-22 13-33 1.5h-224q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z" />
@@ -925,7 +849,7 @@ Camilla Leslie - Software Engineer
 
     
     <span class="px-1">
-        <a href="https://linkedin.com/in/camilla-leslie/" aria-label="linkedin">
+        <a href="https://linkedin.com/in/camilla-leslie/" target="_blank" aria-label="linkedin">
             <svg xmlns="http://www.w3.org/2000/svg" width='2.4em' height='2.4em' fill="#fff" aria-label="LinkedIn"
                 viewBox="0 0 512 512">
                 <rect width="512" height="512" fill="#0077b5" rx="15%" />
@@ -947,7 +871,7 @@ Camilla Leslie - Software Engineer
         <div class="col-md-4 text-center">
             
                 <div class="pb-2">
-                    <a href="http://localhost:1313/portfolio/" title="Camilla Leslie - Software Engineer">
+                    <a href="http://localhost:1313/" title="Camilla Leslie - Software Engineer">
                         <img alt="Footer logo" src="images/Uccello2.svg"
                             height="40px" width="40px">
                     </a>
@@ -968,13 +892,16 @@ Camilla Leslie - Software Engineer
         </div>
     </div>
 </div>
-</footer><script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
     } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
         document.body.classList.add('dark');
     }
 
@@ -983,9 +910,11 @@ Camilla Leslie - Software Engineer
     document.getElementById("theme-toggle").addEventListener("click", () => {
         if (document.body.className.includes("dark")) {
             document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
             document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })

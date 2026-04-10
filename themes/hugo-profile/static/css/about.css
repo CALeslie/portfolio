@@ -1,7 +1,14 @@
 #single {
     padding: 60px 0;
     line-height: 1.7em;
-    font-size: 17px;
+    font-size: 400px;
+    border: 1px solid red;
+    background-color: #2883b8 !important;
+    background-image: linear-gradient(to bottom, #eaedf0, #a1cae2);
+}
+
+#about .single {
+    background-color: #2883b8 !important;
 }
 
 #single .title>h1 {

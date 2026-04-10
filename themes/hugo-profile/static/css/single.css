@@ -2,6 +2,11 @@
     padding: 60px 0;
     line-height: 1.7em;
     font-size: 17px;
+    border: 1px solid red;
+}
+
+#single .py-0 .py-sm-5 {
+    border: 1px solid red;
 }
 
 #single .title > h1 {

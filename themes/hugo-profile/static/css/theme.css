@@ -8,19 +8,40 @@
     fill: none;
 }
 
+.light #about{
+    background-image: linear-gradient(to bottom, var(--background-color), var(--background-fade-color));
+}
+
+.light #contactBorder{
+    height: 1px;
+    background-color: #777777;
+}
+
 /* dark mode */
-.dark {
+.dark > *{
     --background-color: var(--background-color-dark) !important;
     --secondary-background-color: var(--secondary-background-color-dark) !important;
+    --background-fade-color: var(--background-fade-color-dark) !important;
     --text-color: var(--text-color-dark) !important;
     --text-secondary-color: var(--text-secondary-color-dark) !important;
     --text-link-color: var(--text-link-color-dark) !important;
     --primary-color: var(--primary-color-dark);
     --secondary-color: var(--secondary-color-dark);
+    fill: #FFFFFF00;
 }
 
 .dark #footer-socialNetworks-github-svg-path{
     fill: #FFFFFF;
+}
+
+.dark #about{
+    background-image: linear-gradient(to bottom, var(--background-color-dark), var(--background-fade-color-dark));
+    fill: #ffffff00;
+}
+
+.dark #about-image{
+    fill: #ffffff00;
+    background-color: #FFFFFF00;
 }
 
 .text-secondary {
@@ -48,4 +69,9 @@ body.dark #moon {
 
 body:not(.dark) #sun {
     display: none;
+}
+
+body *::selection {
+    color: var(--text-color) !important;
+    background-color: var(--primary-color) !important;
 }

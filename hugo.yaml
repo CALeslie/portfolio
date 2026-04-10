@@ -75,6 +75,7 @@ params:
           - "Gameplay Programming"
           - "Build Automation"
           - "Main Game Loop"
+          - "Player AI"
         links:
           - icon: fab fa-steam
             url: https://store.steampowered.com/app/4450260/666_Malevolence_Lane/

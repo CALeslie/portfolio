@@ -29,6 +29,7 @@ params:
   description: Game Developer and Software Engineer
   animate: true
   favicon: images/Uccello2.svg
+  headerfavicon: /portfolio/images/Uccello2.svg
   useBootstrapCDN: false
 
   navbar:
@@ -41,7 +42,7 @@ params:
     intro: Game Programmer
     title: Camilla Leslie
     content: Software engineer specializing in digital simulation and games.
-    image: images/camilla3.jpg
+    image: /portfolio/images/camilla3.jpg
     roundImage: true
     button:
       enable: true
@@ -65,6 +66,9 @@ params:
       - title: 666 Malevolence Lane - 2026
         content: An action-packed minigame focused local multiplayer experience for you and your friends!
         image: images/mallane2.jpg
+        imagelink: 
+          enable: true
+          link: /portfolio/projects/666-malevolence-lane
         badges:
           - "Unreal Engine 5.6"
           - "Blueprint"

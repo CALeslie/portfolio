@@ -72,7 +72,7 @@
           </aside>
           {{end}}
 
-          {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
+          {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default false }}
           <aside class="social">
             <h5>{{ .Site.Params.terms.social | default (i18n "social") }}</h5>
             <div class="social-content">
@@ -115,7 +115,7 @@
   </button>
 </section>
 
-{{ if or (.Site.Params.singlePages.scrollprogress.enable | default true) (.Params.enableScrollProgress) }}
+{{ if or (.Site.Params.singlePages.scrollprogress.enable | default false) (.Params.enableScrollProgress) }}
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>

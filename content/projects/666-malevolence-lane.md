@@ -8,6 +8,11 @@ tags:
   - Build Automation
   - Blueprints
   - Python
+badges:
+  - Build Automation
+imagelink:
+  enable: true
+  link: /portfolio/projects/666-malevolence-lane
 image: /portfolio/images/mallane2.jpg
 description: ""
 toc: 

@@ -154,6 +154,30 @@ Camilla Leslie - Software Engineer
 
 
 
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  false ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
 
 <header id="profileHeader">
     <nav class="pt-3 navbar navbar-expand-lg animate">
@@ -161,7 +185,7 @@ Camilla Leslie - Software Engineer
             
             <a class="navbar-brand primary-font text-wrap" href="/portfolio/">
                 
-                <img src="images/Uccello2.svg" width="30" height="30"
+                <img src="/portfolio/images/Uccello2.svg" width="30" height="30"
                     class="d-inline-block align-top">
                 Camilla Leslie
                 
@@ -184,8 +208,9 @@ Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio/#about" aria-label="about">
-                            About
+                        <a class="nav-link" href="/portfolio/#projects"
+                            aria-label="projects">
+                            Overview
                         </a>
                     </li>
                     
@@ -209,14 +234,13 @@ Camilla Leslie - Software Engineer
                     
 
                     
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio/#projects"
-                            aria-label="projects">
-                            Overview
+                        <a class="nav-link" href="/portfolio/#about" aria-label="about">
+                            About
                         </a>
                     </li>
-                    
-
                     
 
                     
@@ -338,7 +362,7 @@ Camilla Leslie - Software Engineer
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
-                        <img src="images/camilla3.jpg"
+                        <img src="/portfolio/images/camilla3.jpg"
                             class="img-thumbnail mx-auto rounded-circle"
                             alt=""
                         >
@@ -358,7 +382,13 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="666 Malevolence Lane - 2026">
                     <div class="card-head">
+                        
+                        <a href="/portfolio/projects/666-malevolence-lane">
+                        
                         <img class="card-img-top" src="images/mallane2.jpg" alt="666 Malevolence Lane - 2026">
+                        
+                        </a>
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -423,7 +453,9 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Pizza Wizard: 144X - 2025">
                     <div class="card-head">
+                        
                         <img class="card-img-top" src="images/pizzawizard.png" alt="Pizza Wizard: 144X - 2025">
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -486,7 +518,9 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Bone Rolla - 2022">
                     <div class="card-head">
+                        
                         <img class="card-img-top" src="images/bonerolla.png" alt="Bone Rolla - 2022">
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -541,7 +575,9 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Deep Cover - 2022">
                     <div class="card-head">
+                        
                         <img class="card-img-top" src="images/deepcover.png" alt="Deep Cover - 2022">
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -596,7 +632,9 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="RandomItemGen - 2021">
                     <div class="card-head">
+                        
                         <img class="card-img-top" src="images/randomitemgen.png" alt="RandomItemGen - 2021">
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -651,7 +689,9 @@ Camilla Leslie - Software Engineer
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card my-3 h-100" title="Duality - 2018">
                     <div class="card-head">
+                        
                         <img class="card-img-top" src="images/duality.png" alt="Duality - 2018">
+                        
                     </div>
                     <div class="card-body bg-transparent p-3">
                         <div class="pb-2 bg-transparent">
@@ -967,7 +1007,7 @@ Camilla Leslie - Software Engineer
             
                 <div class="pb-2">
                     <a href="http://localhost:1313/portfolio/" title="Camilla Leslie - Software Engineer">
-                        <img alt="Footer logo" src="images/Uccello2.svg"
+                        <img alt="Footer logo" src="/portfolio/images/Uccello2.svg"
                             height="40px" width="40px">
                     </a>
                 </div>

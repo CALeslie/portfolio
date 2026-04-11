@@ -2,11 +2,9 @@
     padding: 60px 0;
     line-height: 1.7em;
     font-size: 17px;
-    border: 1px solid red;
 }
 
 #single .py-0 .py-sm-5 {
-    border: 1px solid red;
 }
 
 #single .title > h1 {
@@ -21,6 +19,9 @@
 #single .featured-image {
     padding: 1rem;
     padding-top: 0;
+    max-width: 320px;
+    max-height: 240px;
+    margin: auto;
 }
 
 #single .featured-image img {
@@ -177,12 +178,11 @@
 
 /* Tags */
 #single aside.tags {
-    max-height: 35vh;
-    overflow: scroll;
+
 }
 
 #single aside.tags h5 {
-    margin: .7em 0;
+    margin: .5em 0;
     margin-bottom: 1em;
 }
 
@@ -207,9 +207,7 @@
 
 /*TOC*/
 #single aside.toc {
-    padding: .7rem 1rem;
-    max-height: 50vh;
-    overflow: scroll;
+    padding: .5rem 1rem;
 }
 
 #single aside.toc h5 {

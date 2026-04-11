@@ -22,7 +22,7 @@
 </script>
 
 <!-- Show header on scroll up -->
-{{ if .Site.Params.navbar.stickyNavBar.enable | default false }}
+{{ if .Site.Params.navbar.stickyNavBar.enable | default true }}
 {{ $showNavBarOnScrollUp := .Site.Params.navbar.stickyNavBar.showOnScrollUp | default false }}
 <script>
     var prevScrollPos = window.pageYOffset;
@@ -54,8 +54,8 @@
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             <!-- navbar brand -->
             <a class="navbar-brand primary-font text-wrap" href="{{ .Site.Home.RelPermalink }}">
-                {{ if and (or (.Site.Params.favicon) (.Site.Params.navbar.brandLogo)) (.Site.Params.navbar.showBrandLogo | default true) }}
-                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.favicon }}" width="30" height="30"
+                {{ if and (or (.Site.Params.headerfavicon) (.Site.Params.navbar.brandLogo)) (.Site.Params.navbar.showBrandLogo | default true) }}
+                <img src="{{ .Site.Params.navbar.brandLogo | default .Site.Params.headerfavicon }}" width="30" height="30"
                     class="d-inline-block align-top">
                 {{ .Site.Params.navbar.brandName | default .Site.Params.title }}
                 {{ else }}
@@ -89,10 +89,11 @@
                         </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
+                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#about" aria-label="about">
-                            {{ .Site.Params.about.title | default (i18n "nav_about") }}
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#projects"
+                            aria-label="projects">
+                            {{ .Site.Params.projects.title | default (i18n "nav_projects") }}
                         </a>
                     </li>
                     {{ end }}
@@ -115,20 +116,19 @@
                     </li>
                     {{ end }}
 
-                    {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
-                    <li class="nav-item navbar-text">
-                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#projects"
-                            aria-label="projects">
-                            {{ .Site.Params.projects.title | default (i18n "nav_projects") }}
-                        </a>
-                    </li>
-                    {{ end }}
-
                     {{ if and (.Site.Params.achievements.enable | default false) (not (.Site.Params.navbar.menus.disableAchievements | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#achievements"
                             aria-label="achievements">
                             {{ .Site.Params.achievements.title | default (i18n "nav_achievements") }}
+                        </a>
+                    </li>
+                    {{ end }}
+
+                    {{ if and (.Site.Params.about.enable | default false) (not (.Site.Params.navbar.menus.disableAbout | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.RelPermalink }}#about" aria-label="about">
+                            {{ .Site.Params.about.title | default (i18n "nav_about") }}
                         </a>
                     </li>
                     {{ end }}

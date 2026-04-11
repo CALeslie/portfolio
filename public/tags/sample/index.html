@@ -149,6 +149,30 @@ Sample | Camilla Leslie - Software Engineer
 
 
 
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  false ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;
+    });
+</script>
+
+
 
 <header id="profileHeader">
     <nav class="pt-3 navbar navbar-expand-lg animate">
@@ -156,7 +180,7 @@ Sample | Camilla Leslie - Software Engineer
             
             <a class="navbar-brand primary-font text-wrap" href="/portfolio/">
                 
-                <img src="images/Uccello2.svg" width="30" height="30"
+                <img src="/portfolio/images/Uccello2.svg" width="30" height="30"
                     class="d-inline-block align-top">
                 Camilla Leslie
                 
@@ -179,8 +203,9 @@ Sample | Camilla Leslie - Software Engineer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio/#about" aria-label="about">
-                            About
+                        <a class="nav-link" href="/portfolio/#projects"
+                            aria-label="projects">
+                            Overview
                         </a>
                     </li>
                     
@@ -204,14 +229,13 @@ Sample | Camilla Leslie - Software Engineer
                     
 
                     
+
+                    
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="/portfolio/#projects"
-                            aria-label="projects">
-                            Overview
+                        <a class="nav-link" href="/portfolio/#about" aria-label="about">
+                            About
                         </a>
                     </li>
-                    
-
                     
 
                     
@@ -368,7 +392,7 @@ Sample | Camilla Leslie - Software Engineer
             
                 <div class="pb-2">
                     <a href="http://localhost:1313/portfolio/" title="Camilla Leslie - Software Engineer">
-                        <img alt="Footer logo" src="images/Uccello2.svg"
+                        <img alt="Footer logo" src="/portfolio/images/Uccello2.svg"
                             height="40px" width="40px">
                     </a>
                 </div>

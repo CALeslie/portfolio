@@ -2,42 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/gallery/</loc>
+    <loc>http://localhost:1313/gallery/</loc>
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/blogs/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>http://localhost:1313/projects/666-malevolence-lane/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/blogs/666-malevolence-lane/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/emoji-support/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>http://localhost:1313/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/example/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/sample/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/projects/666-malevolence-lane/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/blueprints/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/build-automation/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/python/</loc>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/unreal-engine/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

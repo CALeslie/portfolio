@@ -7,9 +7,9 @@ badges:
   - Build Automation
 imagelink:
   enable: true
-  link: /portfolio/projects/666-malevolence-lane
-image: /portfolio/images/mallane2.jpg
-banner: /portfolio/images/mallanebanner.png
+  link: /projects/666-malevolence-lane
+image: /images/mallane2.jpg
+banner: /images/mallanebanner.png
 description: ""
 toc: 
 ---

@@ -17,10 +17,8 @@
 }
 
 #single .featured-image {
-    padding: 1rem;
-    padding-top: 0;
-    max-width: 320px;
-    max-height: 240px;
+    padding: 0rem;
+    width: 720px;
     margin: auto;
 }
 
@@ -121,7 +119,7 @@
   padding: 2em;
   background-color: var(--secondary-color) !important;
   color: var(--text-secondary-color) !important;
-  max-height: 450px;
+  max-height: 25rem;
 }
 
 #single .page-content pre > code {
@@ -168,7 +166,8 @@
 }
 
 #single .sticky-sidebar {
-  position: sticky;
+    position: sticky;
+    padding-top: 5.5em;
 }
 
 #single .sticky-sidebar ::-webkit-scrollbar {

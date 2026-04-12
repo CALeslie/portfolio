@@ -31,21 +31,17 @@
 <meta property="og:url" content="http://localhost:1313/portfolio/projects/666-malevolence-lane/">
   <meta property="og:site_name" content="Camilla Leslie - Software Engineer">
   <meta property="og:title" content="666 Malevolence Lane">
-  <meta property="og:description" content="Writeup about the game and my involvement.
+  <meta property="og:description" content="My Involvement Writeup about the game and my involvement.
 Code Examples Here I would post snippets of python code about the build automation work I’ve done, or examples of blueprints I made while working on systems of the game.
 #Build function that runs once every 24 hours via APScheduler def BuildGame(self): #Changes directory to UE5 build tools os.chdir(f&#34;{self.epic_games_folder_path}/Engine/Build/BatchFiles/&#34;) #Builds the project&#39;s code into a target file exit_code = subprocess.call(f&#34;Build.bat CapstonePrototype Win64 Development \&#34;{self.game_uproject_path}\&#34;&#34;) if not exit_code == 0: self.webhook.send(f&#34;# Build Information\n\nFailed to build target file from source code! {alert_role_id}&#34;, thread=self.thread_id) return False #Starts build and package of project at game_uproject_path exit_code = subprocess.call(f&#34;RunUAT BuildCookRun -project=\&#34;{self.game_uproject_path}\&#34; -platform=Win64 -clientconfig=Development -serverconfig=Development &#34; &#43; f&#34;-skipcook -maps=AllMaps -compile -stage -pak -archivedirectory={self.build_folder_path} -archive&#34;, shell=True) #If exit_code anything other than 0 build failed, pings Camilla in discord if not exit_code == 0: self.webhook.send(f&#39;# Build Information\n\nBuild failed! {alert_role_id}&#39;, thread=self.thread_id) return False else: data = BuildUtils.GetBuildJSONData() data[&#34;version&#34;] &#43;= 1 BuildUtils.StoreBuildJSONData(data) rel, mile, ver = data[&#34;release&#34;], data[&#34;milestone&#34;], data[&#34;version&#34;] self.webhook.send(f&#39;# Build Information\n\nBuild successful! Current version: v{rel}.{mile}.{ver} {alert_role_id}&#39;, thread=self.thread_id) return True">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="projects">
-    <meta property="article:tag" content="Unreal Engine">
-    <meta property="article:tag" content="Build Automation">
-    <meta property="article:tag" content="Blueprints">
-    <meta property="article:tag" content="Python">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="666 Malevolence Lane">
-  <meta name="twitter:description" content="Writeup about the game and my involvement.
+  <meta name="twitter:description" content="My Involvement Writeup about the game and my involvement.
 Code Examples Here I would post snippets of python code about the build automation work I’ve done, or examples of blueprints I made while working on systems of the game.
 #Build function that runs once every 24 hours via APScheduler def BuildGame(self): #Changes directory to UE5 build tools os.chdir(f&#34;{self.epic_games_folder_path}/Engine/Build/BatchFiles/&#34;) #Builds the project&#39;s code into a target file exit_code = subprocess.call(f&#34;Build.bat CapstonePrototype Win64 Development \&#34;{self.game_uproject_path}\&#34;&#34;) if not exit_code == 0: self.webhook.send(f&#34;# Build Information\n\nFailed to build target file from source code! {alert_role_id}&#34;, thread=self.thread_id) return False #Starts build and package of project at game_uproject_path exit_code = subprocess.call(f&#34;RunUAT BuildCookRun -project=\&#34;{self.game_uproject_path}\&#34; -platform=Win64 -clientconfig=Development -serverconfig=Development &#34; &#43; f&#34;-skipcook -maps=AllMaps -compile -stage -pak -archivedirectory={self.build_folder_path} -archive&#34;, shell=True) #If exit_code anything other than 0 build failed, pings Camilla in discord if not exit_code == 0: self.webhook.send(f&#39;# Build Information\n\nBuild failed! {alert_role_id}&#39;, thread=self.thread_id) return False else: data = BuildUtils.GetBuildJSONData() data[&#34;version&#34;] &#43;= 1 BuildUtils.StoreBuildJSONData(data) rel, mile, ver = data[&#34;release&#34;], data[&#34;milestone&#34;], data[&#34;version&#34;] self.webhook.send(f&#39;# Build Information\n\nBuild successful! Current version: v{rel}.{mile}.{ver} {alert_role_id}&#39;, thread=self.thread_id) return True">
 
@@ -213,6 +209,13 @@ Code Examples Here I would post snippets of python code about the build automati
                 <ul class="navbar-nav ms-auto text-center">
                     
 
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/portfolio/"
+                            aria-label="home">
+                            Home
+                        </a>
+                    </li>
+
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/portfolio/#projects"
@@ -321,11 +324,12 @@ Code Examples Here I would post snippets of python code about the build automati
           </div>
           
           <div class="featured-image">
-            <img class="img-fluid mx-auto d-block" src="/portfolio/images/mallane2.jpg" alt="666 Malevolence Lane">
+            <img class="img-fluid mx-auto d-block" src="/portfolio/images/mallanebanner.png" alt="666 Malevolence Lane">
           </div>
           
           <article class="page-content  p-2">
-          <p>Writeup about the game and my involvement.</p>
+          <h2 id="my-involvement">My Involvement</h2>
+<p>Writeup about the game and my involvement.</p>
 <h2 id="code-examples">Code Examples</h2>
 <p>Here I would post snippets of python code about the build automation work I&rsquo;ve done, or examples of blueprints I made while working on systems of the game.</p>
 <pre tabindex="0"><code>#Build function that runs once every 24 hours via APScheduler
@@ -369,6 +373,7 @@ def BuildGame(self):
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
+    <li><a href="#my-involvement">My Involvement</a></li>
     <li><a href="#code-examples">Code Examples</a></li>
   </ul>
 </nav>
@@ -376,33 +381,6 @@ def BuildGame(self):
           </aside>
           
 
-          
-          <aside class="tags">
-            <h5>Tags</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              
-              
-              <li class="list-inline-item"><a href="/portfolio/tags/unreal-engine"
-                target="_blank"
-              >Unreal Engine</a></li>
-              
-              
-              <li class="list-inline-item"><a href="/portfolio/tags/build-automation"
-                target="_blank"
-              >Build Automation</a></li>
-              
-              
-              <li class="list-inline-item"><a href="/portfolio/tags/blueprints"
-                target="_blank"
-              >Blueprints</a></li>
-              
-              
-              <li class="list-inline-item"><a href="/portfolio/tags/python"
-                target="_blank"
-              >Python</a></li>
-              
-            </ul>
-          </aside>
           
 
           

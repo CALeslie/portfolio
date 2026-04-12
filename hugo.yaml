@@ -29,7 +29,7 @@ params:
   description: Game Developer and Software Engineer
   animate: true
   favicon: images/Uccello2.svg
-  headerfavicon: /portfolio/images/Uccello2.svg
+  headerfavicon: /images/Uccello2.svg
   useBootstrapCDN: false
 
   navbar:
@@ -42,7 +42,7 @@ params:
     intro: Game Programmer
     title: Camilla Leslie
     content: Software engineer specializing in digital simulation and games.
-    image: /portfolio/images/camilla3.jpg
+    image: /images/camilla3.jpg
     roundImage: true
     button:
       enable: true
@@ -68,7 +68,7 @@ params:
         image: images/mallane2.jpg
         imagelink: 
           enable: true
-          link: /portfolio/projects/666-malevolence-lane
+          link: /projects/666-malevolence-lane
         badges:
           - "Unreal Engine 5.6"
           - "Blueprint"
